@@ -1,13 +1,13 @@
 def int_func(n):
-    b = []
+    a = "R"
     for i in n:
-        b.append(i)
-        if 97 <= ord(i) <= 122:
-            print("".join(b).title())
-        else:
-            print("Error")
+        if ord(i) >= 122 or ord(i) <= 97:
+            a = "Error"
+            break
+    if a != "Error":
+        print(n.title())
+    else:
+        print(a)
 
 
-
-
-int_func("textа")
+int_func("text")
